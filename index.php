@@ -40,25 +40,29 @@
 
               <main class="mdl-layout__content" style="margin-left:75px;">
         <!-- Simple Textfield -->
-        
-      <?php
-        echo "<form method=\"post\" name=\"whoareyou\" action=\"handler.php\">\n";
-         echo "<div class=\"mdl-textfield mdl-js-textfield\">\n";
-          echo  "<input class=\"mdl-textfield__input\" type=\"text\" id=\"diameter\" name=\"diameter\">\n";
-          echo "<label class=\"mdl-textfield__label\" for=\"diameter\"> What is the diameter?</label>\n";
-          if (isset($_GET) && $_GET['error'] == 1) {
-            echo "<p class=\"variablecolour\">please enter a valid number (should be positive)</p>";
-          }
-          echo "</div>\n";
-      ?>
-      <?php
-         echo "<div>\n";
-            echo "<button class=\"mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent\">
-              Submit
-            </button>\n";
-         echo "</div>\n";
-        echo "</form>\n";
-            ?>
+                  <form method="post">
+<table border="0">
+<tr>
+<td><input type="text" name="num1" value="" placeholder="Enter the radius of a circle"/></td>
+</tr>
+<tr>
+    <td> <input type="submit" name="submit" value="Submit"/></td>
+</tr>
+</table>
+</form>
+<?php
+if(isset($_POST['submit']))
+{
+$r = $_POST['num1'];
+$pi = 3.14;
+$area = $pi * $r * $r;
+echo "Area of a Circle is: ".$area;
+$cir = 2*$pi*$r;
+echo "Circumference of a circle is: " .$cir;
+return 0;
+}
+?>
+
       </main>
 
         </body>

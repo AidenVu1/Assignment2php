@@ -40,28 +40,6 @@
 
               <main class="mdl-layout__content" style="margin-left:75px;">
         <!-- Simple Textfield -->
-                  <form method="post">
-<table border="0">
-<tr>
-<td><input type="text" name="num1" value="" placeholder="Enter the radius of a circle"/></td>
-</tr>
-<tr>
-    <td> <input type="submit" name="submit" value="Submit"/></td>
-</tr>
-</table>
-</form>
-<?php
-if(isset($_POST['submit']))
-{
-$r = $_POST['num1'];
-$pi = 3.14;
-$area = $pi * $r * $r;
-echo "Area of a Circle is: ".$area;
-$cir = 2*$pi*$r;
-echo "Circumference of a circle is: " .$cir;
-return 0;
-}
-?>
 
       </main>
 

@@ -17,23 +17,22 @@
                 </header>
               <main class="mdl-layout__content" style="margin-left:75px;">
               <?php
-        echo "<form method=\"post\" name=\"whoareyou\" action=\"handler.php\">\n";
-         echo "<div class=\"mdl-textfield mdl-js-textfield\">\n";
-          echo  "<input class=\"mdl-textfield__input\" type=\"text\" id=\"diameter\" name=\"diameter\">\n";
-          echo "<label class=\"mdl-textfield__label\" for=\"diameter\"> What is the diameter?</label>\n";
-          if (isset($_GET) && $_GET['error'] == 1) {
-            echo "<p class=\"variablecolour\">please enter a valid number (should be positive)</p>";
+          if(isset($_GET['diameter']) && $_GET['diameter'] >= 0){
+              $dia = $_GET['diameter'];
+              $radius = $dia / 2;
+              $area = round(pi() * pow($radius, 2), 2);
+              $circumference = round(2 * pi() * $radius, 2);
+              echo "<div class='results'>";
+              echo "Diameter: $dia <br>";
+              echo "Radius: " . round($radius, 2) . "<br>";
+              echo "Area: $area <br>";
+              echo "Circumference: $circumference <br>";
+              echo "</div>";
+          } 
+          elseif(isset($_GET['diameter']) && $_GET['diameter'] < 0){
+              echo "<div class='results'>Please enter a non-negative integer only.</div>";
           }
-          echo "</div>\n";
-      ?>
-      <?php
-         echo "<div>\n";
-            echo "<button class=\"mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent\">
-              Submit
-            </button>\n";
-         echo "</div>\n";
-        echo "</form>\n";
-            ?>
+          ?>
 
       </main>
 

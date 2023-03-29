@@ -11,12 +11,12 @@
             <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
       
                 <header class="mdl-layout__header">
-                  <div class="mdl-layout__header-row">
+                  <div class="mdl-layout__index.phpheader-row">
                     <span class="mdl-layout-title">area and circumference of a circle</span>
                   </div>
                 </header>
               <main class="mdl-layout__content" style="margin-left:75px;">
-<form action="http://amelia.ics2o.ca/ICS2O/Assignments/Assignment2/assignment2.php" method="post">
+<form action="http://aiden.ics2o.ca/Assignment2php/index.php" method="post">
           <div class="mdl-textfield mdl-js-textfield mdl-card__supporting-text">
             <input class="mdl-textfield__input" type="text" id="sample2" name="d" pattern="^(?=.*[1-9])\d*(?:\.\d+)?$">
             <label class="mdl-textfield__label form" for="sample2">Diameter...</label>

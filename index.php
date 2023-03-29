@@ -29,9 +29,6 @@
             </button>
           </div>
         </form>
-    <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">
-    Calculate
-    </button>
               <?php
           if(isset($_GET['diameter']) && $_GET['diameter'] >= 0){
               $dia = $_GET['diameter'];

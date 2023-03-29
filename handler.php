@@ -15,6 +15,7 @@
                   </div>
                 </header>
                 <main class="mdl-layout__content" style="margin-left:75px;">
+                    <?php
                     if(isset($_GET['diameter']) && $_GET['diameter'] >= 0){
                 $dia = $_GET['diameter'];
                 $radius = $dia / 2;

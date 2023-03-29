@@ -16,16 +16,28 @@
                   </div>
                 </header>
               <main class="mdl-layout__content" style="margin-left:75px;">
-<form action="#">
-  <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-    <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="sample4">
-    <label class="mdl-textfield__label" for="sample4">Number...</label>
-    <span class="mdl-textfield__error">Input is not a number!</span>
-  </div>
-</form>
-    <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">
-    Calculate
-    </button>
+<form action="http://amelia.ics2o.ca/ICS2O/Assignments/Assignment2/assignment2.php" method="post">
+          <div class="mdl-textfield mdl-js-textfield mdl-card__supporting-text">
+            <input class="mdl-textfield__input" type="text" id="sample2" name="d" pattern="^(?=.*[1-9])\d*(?:\.\d+)?$">
+            <label class="mdl-textfield__label form" for="sample2">Diameter...</label>
+            <span class="mdl-textfield__error form">Input is not a positive number!</span>
+          </div>
+          <div class="mdl-textfield mdl-js-textfield mdl-card__supporting-text">
+            <input class="mdl-textfield__input" list="units" type="text" id="unit" name="u">
+            <label class="mdl-textfield__label form" for="unit">Unit...</label>
+            <datalist id="units">
+              <option value="mm"></option>
+              <option value="cm"></option>
+              <option value="m"></option>
+              <option value="in"></option>
+              <option value="ft"></option>
+              <option value="yd"></option>
+            </datalist>
+          </div>
+          <div class="mdl-card__actions mdl-card--border">
+            <button class="mdl-button mdl-js-button mdl-button--primary form">Submit Form</button>
+          </div>              
+        </form> 
 
               <?php
           if(isset($_GET['diameter']) && $_GET['diameter'] >= 0){

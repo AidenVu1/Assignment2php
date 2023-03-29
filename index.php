@@ -30,7 +30,7 @@
           </div>
         </form>
               <?php
-          if(isset($_GET['diameter']) && $_GET['diameter']){
+          if(isset($_GET['diameter']) && $_GET['diameter'] >= 0){
               $dia = $_GET['diameter'];
               $radius = $dia / 2;
               $area = round(pi() * pow($radius, 2), 2);

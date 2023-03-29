@@ -16,13 +16,19 @@
                   </div>
                 </header>
               <main class="mdl-layout__content" style="margin-left:75px;">
-<form action="#">
-  <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-    <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="sample4">
-    <label class="mdl-textfield__label" for="sample4">Number...</label>
-    <span class="mdl-textfield__error">Input is not a number!</span>
-  </div>
-</form>
+<form action="" method="GET" class="mdl-grid" autocomplete="off">
+          <div class="mdl-cell mdl-cell--12-col">
+            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+              <input class="mdl-textfield__input" type="text" id="diameter" name="diameter" pattern="[0-9]+(\.[0-9]+)?" title="Invalid input">
+              <label class="mdl-textfield__label" for="diameter">Diameter</label>
+            </div>
+          </div>
+          <div class="mdl-cell mdl-cell--12-col">
+            <button type="submit" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored mdl-js-ripple-effect mdl-cell--12-col">
+              Calculate
+            </button>
+          </div>
+        </form>
     <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">
     Calculate
     </button>

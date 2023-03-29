@@ -31,6 +31,7 @@
             elseif(isset($_GET['diameter']) && $_GET['diameter'] < 0){
                 echo "<div class='results'>Please enter a non-negative integer only.</div>";
             }
+                    ?>
 </main>
 
 </div>
